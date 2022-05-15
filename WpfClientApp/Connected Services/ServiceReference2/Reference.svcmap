@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4cb4ae1d-99dd-4d24-9e43-b8a8b90c440b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:10000/SearchService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ToDoService.wsdl" MetadataType="Wsdl" ID="10b369cb-c128-4284-b399-07e72cfa4147" SourceId="1" SourceUrl="http://localhost:10000/SearchService?wsdl" />
+    <MetadataFile FileName="SearchService.xsd" MetadataType="Schema" ID="16e18f28-921d-415b-80cf-1facb9473bff" SourceId="1" SourceUrl="http://localhost:10000/SearchService?xsd=xsd1" />
+    <MetadataFile FileName="SearchService1.xsd" MetadataType="Schema" ID="06664a77-6fdd-4c78-b22a-c94bb993330e" SourceId="1" SourceUrl="http://localhost:10000/SearchService?xsd=xsd2" />
+    <MetadataFile FileName="SearchService2.xsd" MetadataType="Schema" ID="2774f53f-1a04-416d-a7b5-7172c746034c" SourceId="1" SourceUrl="http://localhost:10000/SearchService?xsd=xsd0" />
+    <MetadataFile FileName="SearchService.disco" MetadataType="Disco" ID="fc618199-a09e-40f4-8043-a077a22d364c" SourceId="1" SourceUrl="http://localhost:10000/SearchService?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

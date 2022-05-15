@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:10000/ToDoService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfServiceLibrary" />
+  <xs:import schemaLocation="http://localhost:10000/ToDoService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ToDoLibrary" />
   <xs:element name="AddToDo">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfServiceLibrary" minOccurs="0" name="todo" nillable="true" type="q1:ToDo" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ToDoLibrary" minOccurs="0" name="todo" nillable="true" type="q1:ToDo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -12,20 +12,6 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="AddToDoResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetToDos">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="search" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetToDosResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfServiceLibrary" minOccurs="0" name="GetToDosResult" nillable="true" type="q2:ArrayOfToDo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

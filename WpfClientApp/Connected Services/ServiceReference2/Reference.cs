@@ -8,14 +8,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WpfClientApp.ToDoService {
+namespace WpfClientApp.ServiceReference2 {
     using System.Runtime.Serialization;
     using System;
     
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ToDo", Namespace="http://schemas.datacontract.org/2004/07/WcfServiceLibrary")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ToDo", Namespace="http://schemas.datacontract.org/2004/07/ToDoLibrary")]
     [System.SerializableAttribute()]
     public partial class ToDo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -123,20 +123,14 @@ namespace WpfClientApp.ToDoService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ToDoService.IToDoService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference2.IToDoService")]
     public interface IToDoService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IToDoService/AddToDo", ReplyAction="http://tempuri.org/IToDoService/AddToDoResponse")]
-        bool AddToDo(WpfClientApp.ToDoService.ToDo todo);
+        bool AddToDo(WpfClientApp.ServiceReference2.ToDo todo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IToDoService/AddToDo", ReplyAction="http://tempuri.org/IToDoService/AddToDoResponse")]
-        System.Threading.Tasks.Task<bool> AddToDoAsync(WpfClientApp.ToDoService.ToDo todo);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IToDoService/GetToDos", ReplyAction="http://tempuri.org/IToDoService/GetToDosResponse")]
-        WpfClientApp.ToDoService.ToDo[] GetToDos(string search);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IToDoService/GetToDos", ReplyAction="http://tempuri.org/IToDoService/GetToDosResponse")]
-        System.Threading.Tasks.Task<WpfClientApp.ToDoService.ToDo[]> GetToDosAsync(string search);
+        System.Threading.Tasks.Task<bool> AddToDoAsync(WpfClientApp.ServiceReference2.ToDo todo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IToDoService/MarkToDoCompleted", ReplyAction="http://tempuri.org/IToDoService/MarkToDoCompletedResponse")]
         bool MarkToDoCompleted(int index);
@@ -158,12 +152,12 @@ namespace WpfClientApp.ToDoService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IToDoServiceChannel : WpfClientApp.ToDoService.IToDoService, System.ServiceModel.IClientChannel {
+    public interface IToDoServiceChannel : WpfClientApp.ServiceReference2.IToDoService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ToDoServiceClient : System.ServiceModel.ClientBase<WpfClientApp.ToDoService.IToDoService>, WpfClientApp.ToDoService.IToDoService {
+    public partial class ToDoServiceClient : System.ServiceModel.ClientBase<WpfClientApp.ServiceReference2.IToDoService>, WpfClientApp.ServiceReference2.IToDoService {
         
         public ToDoServiceClient() {
         }
@@ -184,20 +178,12 @@ namespace WpfClientApp.ToDoService {
                 base(binding, remoteAddress) {
         }
         
-        public bool AddToDo(WpfClientApp.ToDoService.ToDo todo) {
+        public bool AddToDo(WpfClientApp.ServiceReference2.ToDo todo) {
             return base.Channel.AddToDo(todo);
         }
         
-        public System.Threading.Tasks.Task<bool> AddToDoAsync(WpfClientApp.ToDoService.ToDo todo) {
+        public System.Threading.Tasks.Task<bool> AddToDoAsync(WpfClientApp.ServiceReference2.ToDo todo) {
             return base.Channel.AddToDoAsync(todo);
-        }
-        
-        public WpfClientApp.ToDoService.ToDo[] GetToDos(string search) {
-            return base.Channel.GetToDos(search);
-        }
-        
-        public System.Threading.Tasks.Task<WpfClientApp.ToDoService.ToDo[]> GetToDosAsync(string search) {
-            return base.Channel.GetToDosAsync(search);
         }
         
         public bool MarkToDoCompleted(int index) {
@@ -222,6 +208,61 @@ namespace WpfClientApp.ToDoService {
         
         public System.Threading.Tasks.Task<string> GetToDoDescriptionAsync(int index) {
             return base.Channel.GetToDoDescriptionAsync(index);
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference2.ISearchToDoService", CallbackContract=typeof(WpfClientApp.ServiceReference2.ISearchToDoServiceCallback), SessionMode=System.ServiceModel.SessionMode.Required)]
+    public interface ISearchToDoService {
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ISearchToDoService/GetToDos")]
+        void GetToDos(string search);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ISearchToDoService/GetToDos")]
+        System.Threading.Tasks.Task GetToDosAsync(string search);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface ISearchToDoServiceCallback {
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ISearchToDoService/SearchResult")]
+        void SearchResult(WpfClientApp.ServiceReference2.ToDo[] result);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface ISearchToDoServiceChannel : WpfClientApp.ServiceReference2.ISearchToDoService, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class SearchToDoServiceClient : System.ServiceModel.DuplexClientBase<WpfClientApp.ServiceReference2.ISearchToDoService>, WpfClientApp.ServiceReference2.ISearchToDoService {
+        
+        public SearchToDoServiceClient(System.ServiceModel.InstanceContext callbackInstance) : 
+                base(callbackInstance) {
+        }
+        
+        public SearchToDoServiceClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName) : 
+                base(callbackInstance, endpointConfigurationName) {
+        }
+        
+        public SearchToDoServiceClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, string remoteAddress) : 
+                base(callbackInstance, endpointConfigurationName, remoteAddress) {
+        }
+        
+        public SearchToDoServiceClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(callbackInstance, endpointConfigurationName, remoteAddress) {
+        }
+        
+        public SearchToDoServiceClient(System.ServiceModel.InstanceContext callbackInstance, System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(callbackInstance, binding, remoteAddress) {
+        }
+        
+        public void GetToDos(string search) {
+            base.Channel.GetToDos(search);
+        }
+        
+        public System.Threading.Tasks.Task GetToDosAsync(string search) {
+            return base.Channel.GetToDosAsync(search);
         }
     }
 }

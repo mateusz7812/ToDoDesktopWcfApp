@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfClientApp.AddingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfClientApp"
+        mc:Ignorable="d"
+        Title="AddingWindow" Height="330" Width="300">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                <TextBlock Margin="10 7 0 0" Height="30" Text="Name" Width="80" />
+                <TextBox x:Name="NameBox" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Width="185" VerticalContentAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="10 7 0 0" Height="30" Text="Deadline" Width="80" />
+                <DatePicker x:Name="DeadlineBox" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Width="185"  VerticalContentAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="10 7 0 0" Height="30" Text="Rating" Width="80" />
+                <TextBox x:Name="RatingBox" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Width="185" PreviewTextInput="NumberValidationTextBox" VerticalContentAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="10 7 0 0" Height="30" Text="Description" Width="80" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="DescriptionBox" HorizontalAlignment="Right" VerticalAlignment="Top" Width="260" Height="90" Margin="15 0 15 0" TextWrapping="Wrap" AcceptsReturn="True" AcceptsTab="True" VerticalContentAlignment="Stretch"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Margin="10 10 10 10" Padding="10 5 10 5" Content="Add" Click="Button_Click"/>
+            </StackPanel>
+        </StackPanel>
+        
+    </Grid>
+</Window>

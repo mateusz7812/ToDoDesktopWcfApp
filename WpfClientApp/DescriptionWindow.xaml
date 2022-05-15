@@ -1,0 +1,16 @@
+﻿<Window x:Class="WpfClientApp.DescriptionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfClientApp"
+        mc:Ignorable="d"
+        Title="DescriptionWindow" Height="400" Width="400">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <TextBlock x:Name="NameBox" HorizontalAlignment="Center" Text="Name" Padding="0 20 0 0"/>
+            <TextBlock x:Name="DescriptionBox" TextWrapping="Wrap" Padding="20" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis tincidunt elementum. Curabitur tortor urna, fringilla ut augue non, aliquet finibus diam. Nulla quis luctus nisi. Phasellus libero tellus, hendrerit vel ultrices id, tempus vel diam. Proin molestie enim vel malesuada accumsan. Cras mattis semper risus eget elementum. Proin eu quam felis. Maecenas pharetra felis vel lacus scelerisque cursus. Morbi eget mi consequat, mollis mauris eget, viverra arcu. In in turpis tempus, consectetur neque at, interdum dolor. Vivamus lacinia, justo id pharetra volutpat, est turpis gravida justo, a posuere metus lorem ut tellus. Pellentesque et neque sed lorem maximus tempus. "/>
+            <Button Content="Ok" Width="60" Height="30" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

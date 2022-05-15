@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0D14AF10-4890-4CB2-93CD-BD79164A19AC}</ProjectGuid>
+    <ProjectGuid>{99A80C20-422B-4EE3-AF77-3A13A1F81E81}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>WcfHostApp</RootNamespace>
-    <AssemblyName>WcfHostApp</AssemblyName>
+    <RootNamespace>ToDoLibrary</RootNamespace>
+    <AssemblyName>ToDoLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -35,7 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,19 +46,11 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToDo.cs" />
+    <Compile Include="ToDoDb.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SearchToDoWcfLibrary\SearchToDoWcfLibrary.csproj">
-      <Project>{C2A3761F-25AC-42F7-BA8A-053165E5CDE4}</Project>
-      <Name>SearchToDoWcfLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WcfServiceLibrary\WcfServiceLibrary.csproj">
-      <Project>{A32446CA-527F-4CF2-8E5C-791017F32D4C}</Project>
-      <Name>WcfServiceLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

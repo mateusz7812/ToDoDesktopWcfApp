@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfHostApp", "WcfHostApp\Wc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfClientApp", "WpfClientApp\WpfClientApp.csproj", "{379C3D01-0907-4585-9FC5-983B9D8B388D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchToDoWcfLibrary", "SearchToDoWcfLibrary\SearchToDoWcfLibrary.csproj", "{C2A3761F-25AC-42F7-BA8A-053165E5CDE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoLibrary", "ToDoLibrary\ToDoLibrary.csproj", "{99A80C20-422B-4EE3-AF77-3A13A1F81E81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{379C3D01-0907-4585-9FC5-983B9D8B388D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{379C3D01-0907-4585-9FC5-983B9D8B388D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{379C3D01-0907-4585-9FC5-983B9D8B388D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2A3761F-25AC-42F7-BA8A-053165E5CDE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2A3761F-25AC-42F7-BA8A-053165E5CDE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2A3761F-25AC-42F7-BA8A-053165E5CDE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2A3761F-25AC-42F7-BA8A-053165E5CDE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99A80C20-422B-4EE3-AF77-3A13A1F81E81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99A80C20-422B-4EE3-AF77-3A13A1F81E81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99A80C20-422B-4EE3-AF77-3A13A1F81E81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99A80C20-422B-4EE3-AF77-3A13A1F81E81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

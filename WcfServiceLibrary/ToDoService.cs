@@ -4,51 +4,49 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using ToDoLibrary;
 
 namespace WcfServiceLibrary
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
+
     public class ToDoService : IToDoService
     {
-        private static readonly List<ToDo> ToDos = new List<ToDo>();
         public bool AddToDo(ToDo todo)
         {
             if (todo.Name is null)
                 return false;
-            ToDos.Add(todo);
+            ToDoDB.ToDos.Add(todo);
+            Console.WriteLine("Todo added");
             return true;
         }
 
         public bool DeleteToDo(int index)
         {
-            if (index < 0 || index >= ToDos.Count)
+            if (index < 0 || index >= ToDoDB.ToDos.Count)
                 return false;
-            ToDos.RemoveAt(index);
+            ToDoDB.ToDos.RemoveAt(index);
+            Console.WriteLine("Todo deleted");
             return true;
         }
 
         public string GetToDoDescription(int index)
         {
-            if (index < 0 || index >= ToDos.Count)
+            if (index < 0 || index >= ToDoDB.ToDos.Count)
                 return null;
-            return ToDos [index].Description;
+            Console.WriteLine("Todo description readed");
+            return ToDoDB.ToDos [index].Description;
         }
 
-        public List<ToDo> GetToDos(string search)
-        {
-            return ToDos.Where(
-                    todo => search is null || 
-                    todo.Name.Contains(search) || 
-                    todo.Description.Contains(search)
-                ).ToList();
-        }
 
         public bool MarkToDoCompleted(int index)
         {
-            if (index < 0 || index >= ToDos.Count)
+            if (index < 0 || index >= ToDoDB.ToDos.Count)
                 return false;
-            ToDos [index].Completed = true;
+            ToDoDB.ToDos [index].Completed = true;
+            Console.WriteLine("Todo completed");
             return true;
         }
     }
+
 }
